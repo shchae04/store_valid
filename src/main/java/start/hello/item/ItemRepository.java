@@ -50,6 +50,13 @@ public class ItemRepository {
     }
 
     /**
+     * find all item
+     */
+    public List<Item> allItem() {
+        return new ArrayList<Item>();
+    }
+
+    /**
      * clear store
      */
     public void clearStore() {
