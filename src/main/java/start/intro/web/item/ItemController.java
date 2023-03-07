@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import start.intro.domain.item.Item;
 import start.intro.domain.item.ItemRepository;
-import start.intro.web.form.SaveItemForm;
-import start.intro.web.form.UpdateItemForm;
+import start.intro.web.item.form.SaveItemForm;
+import start.intro.web.item.form.UpdateItemForm;
 
 import java.util.List;
 
@@ -118,5 +118,13 @@ public class ItemController {
         repository.update(itemId, item);
 
         return "redirect:/intro/{itemId}";
+    }
+
+    /**
+     * Admin only clear store ( interceptor )
+     */
+    @PostMapping("/clearAll")
+    public void clearAll() {
+        repository.clearStore();
     }
 }
