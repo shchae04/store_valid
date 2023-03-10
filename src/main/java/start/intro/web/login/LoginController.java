@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import start.intro.domain.login.LoginService;
+import start.intro.domain.member.FindMember;
 import start.intro.domain.member.Member;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -58,5 +60,15 @@ public class LoginController {
         }
 
         return "redirect:/";
+    }
+
+    @PostMapping("/findPw")
+    public String findPw(@ModelAttribute("form") FindMember member, HttpServletRequest request) {
+
+        String pw = loginService.findPw(member.getLoginId(), member.getUserName());
+
+        request.setAttribute("password", pw);
+
+        return "login/lookUpMember";
     }
 }

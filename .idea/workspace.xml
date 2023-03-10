@@ -4,27 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8304cf3-d650-4b46-9a06-e67230ea28e6" name="Changes" comment="main logic">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/home/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/home/loginHome.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/members/MemberAddForm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/start/intro/domain/item/ItemRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/intro.main.iml" beforeDir="false" />
+    <list default="true" id="a8304cf3-d650-4b46-9a06-e67230ea28e6" name="Changes" comment="test logic">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/start/intro/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/start/intro/domain/member/FindMember.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/loginHome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/start/intro/web/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/start/intro/web/login/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ItemController.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/start/intro/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/start/intro/TestClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/start/intro/domain/item/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/start/intro/domain/item/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/start/intro/domain/login/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/start/intro/domain/login/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/start/intro/domain/member/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/start/intro/domain/member/MemberRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/start/intro/web/item/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/start/intro/web/item/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/start/intro/web/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/start/intro/web/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login/lookUpMember.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home/loginHome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/intro/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/intro/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/intro/itemAddForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/intro/itemAddForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/intro/itemUpdateForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/intro/itemUpdateForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/intro/items.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/intro/items.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login/loginForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login/loginForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/members/MemberAddForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/members/MemberAddForm.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +44,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="HTML File" />
+        <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -68,10 +74,11 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/Chae/Desktop/project_export/store_valid",
+    "last_opened_file_path": "C:/Users/Chae/Desktop/project_export/store_valid/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -79,20 +86,29 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "settings.editor.selected.configurable": "File.Encoding",
     "spring.configuration.checksum": "2f4fc5b8646e80bd72638584fa5e9e5d",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Chae\Desktop\project_export\store_valid\src\main\resources" />
+      <recent name="C:\Users\Chae\Desktop\project_export\store_valid\src\main\resources\templates" />
+      <recent name="C:\Users\Chae\Desktop\project_export\store_valid\src\main\resources\static" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Chae\Desktop\project_export\store_valid\src\main\resources\static\css" />
+      <recent name="C:\Users\Chae\Desktop\project_export\store_valid\src\main\resources\templates" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="start.intro.domain.item" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ItemRepositoryTest.allItem">
+  <component name="RunManager" selected="Spring Boot.HelloApplication">
     <configuration name="ItemRepositoryTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -207,7 +223,7 @@
       <updated>1678165693114</updated>
       <workItem from="1678165694411" duration="3121000" />
       <workItem from="1678168863370" duration="5509000" />
-      <workItem from="1678249953469" duration="8433000" />
+      <workItem from="1678249953469" duration="20926000" />
     </task>
     <task id="LOCAL-00001" summary="main logic">
       <created>1678173366723</created>
@@ -223,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678173463549</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test logic">
+      <created>1678348489116</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678348489117</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +254,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="main logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="main logic" />
+    <MESSAGE value="test logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="test logic" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -33,6 +33,7 @@ public class ItemController {
     public String items(Model model) {
         List<Item> items = repository.allItem();
         model.addAttribute("items", items);
+        System.out.println("model = " + model);
         return "intro/items";
     }
 
@@ -44,7 +45,10 @@ public class ItemController {
      * @return
      */
     @GetMapping("/{itemId}")
-    public String item(@PathVariable Long itemId, Model model) {
+    public String item(@PathVariable long itemId, Model model) {
+
+        System.out.println("itemId = " + itemId);
+        System.out.println("model = " + model);
 
         Item findItem = repository.findById(itemId);
         model.addAttribute("item", findItem);

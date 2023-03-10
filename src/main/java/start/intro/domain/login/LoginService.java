@@ -12,6 +12,10 @@ public class LoginService {
     private final MemberRepository repository;
 
     public Member login(String id, String password) {
-        return repository.findByLoginId(id).filter(M -> M.getPassword().equals(password)).orElse(null);
+        return repository.findByLoginId(id).stream().filter(m -> m.getLoginId().equals(id)).findFirst().orElse(null);
+    }
+
+    public String findPw(String loginId, String userName) {
+        return repository.findPw(loginId,userName);
     }
 }

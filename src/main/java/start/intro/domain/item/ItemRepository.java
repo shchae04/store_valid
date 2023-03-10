@@ -52,7 +52,7 @@ public class ItemRepository {
      * find all item
      */
     public List<Item> allItem() {
-        return new ArrayList<Item>();
+        return new ArrayList<>(store.values());
     }
 
 

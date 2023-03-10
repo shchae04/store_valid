@@ -31,6 +31,20 @@ public class MemberRepository {
     }
 
     public Optional<Member> findByLoginId(String loginId) {
-        return findAll().stream().filter(member -> member.getLoginId().equals(loginId)).findAny();
+        return findAll().stream().filter(member -> member.getLoginId().equals(loginId)).findFirst();
+    }
+
+    public String findPw(String loginId, String userName) {
+
+        Member findMember = findByLoginId(loginId).get();
+
+        boolean bool1 = findMember.getLoginId().equals(loginId);
+        boolean bool2 = findMember.getUserName().equals(userName);
+
+        if (bool1 && bool2) {
+            return findMember.getPassword();
+        }
+
+        return "NO EXIST";
     }
 }
