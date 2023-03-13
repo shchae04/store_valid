@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import start.intro.domain.login.LoginService;
-import start.intro.domain.member.FindMember;
 import start.intro.domain.member.Member;
+import start.intro.web.session.SessionConstant;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,13 +20,14 @@ import javax.servlet.http.HttpSession;
 @RequiredArgsConstructor
 public class LoginController {
 
-    private LoginService loginService;
+    private final LoginService loginService;
 
     @GetMapping("/login")
     public String loginForm(@ModelAttribute("loginForm") LoginForm form) {
         return "login/loginForm";
     }
 
+    //같은 url로 들어옴
     @PostMapping("/login")
     public String login(@ModelAttribute LoginForm form, BindingResult bindingResult, HttpServletRequest request) {
 
@@ -35,7 +36,11 @@ public class LoginController {
             return "login/loginForm";
         }
 
+        log.info("form id ={}", form.getLoginId());
+        log.info("form pw ={}", form.getPassword());
+
         Member loginMember = loginService.login(form.getLoginId(), form.getPassword());
+        log.info("loginMember ={}", loginMember);
 
         if (loginMember == null) {
             bindingResult.reject("loginFail", "ID, PW NOT MATCH");
@@ -43,7 +48,7 @@ public class LoginController {
         }
 
         HttpSession session = request.getSession();
-        session.setAttribute("loginId", loginMember);
+        session.setAttribute(SessionConstant.LOGIN_MEMBER_SESSION, loginMember);
 
         return "redirect:/";
 
@@ -62,8 +67,15 @@ public class LoginController {
         return "redirect:/";
     }
 
+    /**
+     * 비밀번호 찾기 로직
+     *
+     * @param member
+     * @param request
+     * @return
+     */
     @PostMapping("/findPw")
-    public String findPw(@ModelAttribute("form") FindMember member, HttpServletRequest request) {
+    public String findPw(@ModelAttribute("form") Member member, HttpServletRequest request) {
 
         String pw = loginService.findPw(member.getLoginId(), member.getUserName());
 

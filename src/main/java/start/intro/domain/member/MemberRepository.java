@@ -14,7 +14,7 @@ public class MemberRepository {
     //DB연동 전 store 선언
     private static Map<Long, Member> store = new HashMap<>();
 
-    private static Long sequence;
+    private static long sequence;
 
     public Member save(Member member) {
         member.setId(++sequence);

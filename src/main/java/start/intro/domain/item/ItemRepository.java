@@ -55,6 +55,12 @@ public class ItemRepository {
         return new ArrayList<>(store.values());
     }
 
+    /**
+     * delete item
+     */
+    public void deleteItemByID(Long itemId) {
+        store.remove(itemId);
+    }
 
 
     /**

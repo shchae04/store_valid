@@ -29,7 +29,7 @@ public class ItemController {
      * @param model
      * @return
      */
-    @GetMapping
+    @GetMapping("/items")
     public String items(Model model) {
         List<Item> items = repository.allItem();
         model.addAttribute("items", items);
@@ -123,6 +123,21 @@ public class ItemController {
 
         return "redirect:/intro/{itemId}";
     }
+
+
+    /**
+     * 상품 삭제
+     * @param itemId
+     * @return
+     */
+    @PostMapping("/{itemId}/delete")
+    public String delete(@PathVariable Long itemId) {
+
+        repository.deleteItemByID(itemId);
+
+        return "redirect:/intro/items";
+    }
+
 
     /**
      * Admin only clear store ( interceptor )

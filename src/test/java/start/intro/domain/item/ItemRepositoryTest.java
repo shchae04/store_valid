@@ -78,4 +78,16 @@ class ItemRepositoryTest {
 
         Assertions.assertThat(items).size().isEqualTo(0);
     }
+
+    @Test
+    void deleteItem() {
+        Item itemA = itemRepository.save(new Item("item1", 10000, 10));
+
+        itemRepository.deleteItemByID(itemA.getId());
+
+        List<Item> items = itemRepository.allItem();
+
+        Assertions.assertThat(items).size().isEqualTo(0);
+
+    }
 }
