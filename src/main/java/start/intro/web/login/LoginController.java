@@ -3,16 +3,17 @@ package start.intro.web.login;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import start.intro.domain.login.LoginService;
 import start.intro.domain.member.Member;
 import start.intro.web.session.SessionConstant;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 @Controller
@@ -67,20 +68,35 @@ public class LoginController {
         return "redirect:/";
     }
 
+
+    @GetMapping("/foundPassword")
+    public String getPw(@ModelAttribute("form") Member member, RedirectAttributes redirectAttributes) {
+
+
+        return "login/foundMember";
+
+    }
+
+
+
+    @GetMapping("/findPw")
+    public String findPw(@ModelAttribute("form") Member member) {
+        return "login/lookUpMember";
+    }
+
     /**
      * 비밀번호 찾기 로직
      *
-     * @param member
-     * @param request
-     * @return
      */
     @PostMapping("/findPw")
-    public String findPw(@ModelAttribute("form") Member member, HttpServletRequest request) {
+    public String findPw(@ModelAttribute("form") Member member, BindingResult bindingResult) {
 
         String pw = loginService.findPw(member.getLoginId(), member.getUserName());
 
-        request.setAttribute("password", pw);
+        if (!member.getPassword().equals(pw)) {
+            return "login/lookUpMember";
+        }
 
-        return "login/lookUpMember";
+        return "login/foundMember";
     }
 }
