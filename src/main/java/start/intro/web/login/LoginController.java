@@ -60,6 +60,7 @@ public class LoginController {
     public String logout(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         //세션은 검증하지 않고 요청들어오면 삭제.
+        log.info("logout Request={}", request.getSession().getId());
         // todo 없을때만
         if (session != null) {
             session.invalidate();
