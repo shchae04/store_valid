@@ -7,7 +7,7 @@ import javax.validation.constraints.NotEmpty;
 @Data
 public class Member {
 
-
+    private Long id;
     @NotEmpty
     private String loginId;
 
@@ -16,6 +16,8 @@ public class Member {
 
     @NotEmpty
     private String password;
-    @NotEmpty
-    private Long id;
+
+
+
+
 }

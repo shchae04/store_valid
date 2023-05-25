@@ -3,7 +3,6 @@ package start.intro.web.login;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -61,7 +60,6 @@ public class LoginController {
         HttpSession session = request.getSession(false);
         //세션은 검증하지 않고 요청들어오면 삭제.
         log.info("logout Request={}", request.getSession().getId());
-        // todo 없을때만
         if (session != null) {
             session.invalidate();
         }
@@ -77,7 +75,6 @@ public class LoginController {
         return "login/foundMember";
 
     }
-
 
 
     @GetMapping("/findPw")
